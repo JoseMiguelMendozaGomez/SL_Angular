@@ -1,0 +1,111 @@
+.main-container {
+    width: 100%;
+    height: 100vh;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 10px;
+    height: 100%;
+}
+
+.up-container {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    height: 100%;
+}
+
+.flexCont {
+    display: flex;
+    align-items: none;
+    justify-content: space-around;
+}
+
+.formulario {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    flex: 75%;
+    align-items: center;
+    padding: 70px;
+
+}
+
+.formulario::placeholder {
+    color: black;
+    padding: 50px;
+}
+
+.titulo {
+    font-size: 40px;
+    color: #00abeb;
+}
+
+span {
+    color: black;
+}
+
+section {
+    background-color: #00abeb;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex: 25%;
+    align-items: center;
+    height: 100vh;
+    padding: 0 25px;
+}
+
+.bienvenida {
+    font-size: 28px;
+    text-align: left;
+
+}
+
+li {
+    list-style-type: none;
+
+}
+
+.lista {
+    line-height: 3;
+}
+
+input {
+    background-color: #e7e7e7;
+    width: 200px;
+    height: 25px;
+    border: 0;
+    border-radius: 8px;
+    height: 40px;
+    width: 435px;
+    padding-left: 35px;
+    margin-bottom: 10px;
+}
+
+.boton {
+    background-color: black;
+    color: white;
+    align-items: center;
+    border-radius: 32px;
+    width: 130px;
+    height: 38px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 25%;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.login {
+    color: #00abeb;
+}
