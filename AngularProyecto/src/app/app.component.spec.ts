@@ -57,11 +57,39 @@ describe('AppComponent', () => {
     expect(app.Retofizz(-1)).toEqual('Numero n');
   });
 
+  it('debería devolver true para palabras que son anagramas', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.sonAnagramas('roma', 'amor')).toBeTrue();
+    expect(app.sonAnagramas('anagrama', 'nagarama')).toBeTrue();
+    expect(app.sonAnagramas('listen', 'silent')).toBeTrue();
+  });
+
+  it('debería devolver false para palabras que no son anagramas', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.sonAnagramas('hola', 'hello')).toBeFalse();
+    expect(app.sonAnagramas('foo', 'bar')).toBeFalse();
+  });
+  it('debería devolver false si las palabras tienen diferentes longitudes', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.sonAnagramas('casa', 'silla')).toBeFalse();
+    expect(app.sonAnagramas('hola', 'adiós')).toBeFalse();
+  });
+  it('debería devolver true para palabras vacías', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.sonAnagramas('', '')).toBeTrue();
+  });
 
 
 
 
-  
+
+
+
+
 
  
 });
