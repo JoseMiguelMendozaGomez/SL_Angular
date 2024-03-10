@@ -14,6 +14,8 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
   
+
+
   it(`Valida que los multiplos de 3 digan Fizz`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -54,6 +56,12 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.Retofizz(-1)).toEqual('Numero n');
   });
+
+
+
+
+
+  
 
  
 });

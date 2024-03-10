@@ -9,9 +9,7 @@ export class AppComponent {
   title = 'AngularProyecto';
 
 
-     
-
-
+     //Funcion reto #1 Fizzbuz
       Retofizz(n: number) {
       if (n % 3 == 0 && n % 5 == 0) {
         return "fizbus";
@@ -27,6 +25,13 @@ export class AppComponent {
         return n;
       }
     }
+
+    // Funcion reto #2 
+
+
+
+    
+
 
 
 

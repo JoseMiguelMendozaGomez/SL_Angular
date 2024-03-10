@@ -1,10 +1,14 @@
 import { Component,Input } from '@angular/core';
 
 @Component({
-  selector: 'app-barra-lateral',
+  selector: 'barra_lateral',
   templateUrl: './barra-lateral.component.html',
   styleUrls: ['./barra-lateral.component.scss']
 })
 export class BarraLateralComponent {
-  @Input() data: any;
+  @Input() welcomeText: string ='';
+  @Input() registerText: string ='';
+  @Input() registerLinkText : string ='';
+
+  constructor(){}
 }
