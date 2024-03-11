@@ -11,6 +11,7 @@ export class BarraLateralComponent {
   @Input() registerLinkText : string ='';
   @Input() mensajeSidebar1 : string ='';
   @Input() mensajeSidebar2 : string ='';
+  
 
   constructor(){}
 }

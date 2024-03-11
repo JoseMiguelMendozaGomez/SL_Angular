@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {} from 'jasmine';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -57,30 +58,41 @@ describe('AppComponent', () => {
     expect(app.Retofizz(-1)).toEqual('Numero n');
   });
 
-  it('debería devolver true para palabras que son anagramas', () => {
+
+
+
+
+  it('True para palabras que son anagramas', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.sonAnagramas('roma', 'amor')).toBeTrue();
-    expect(app.sonAnagramas('anagrama', 'nagarama')).toBeTrue();
-    expect(app.sonAnagramas('listen', 'silent')).toBeTrue();
+    expect(app.RetoAnagrama('  roma', 'amor')).toBeTrue();
+    expect(app.RetoAnagrama('anagrama', 'nagarama')).toBeTrue();
+    expect(app.RetoAnagrama('lis      ten', 'silent')).toBeTrue();
   });
 
-  it('debería devolver false para palabras que no son anagramas', () => {
+  it('retorno de false a palabras exactamente iguales', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.sonAnagramas('hola', 'hello')).toBeFalse();
-    expect(app.sonAnagramas('foo', 'bar')).toBeFalse();
+    expect(app.RetoAnagrama('hombre', 'hombre')).toBeFalse();
+    expect(app.RetoAnagrama('perro', 'perro')).toBeFalse();
   });
-  it('debería devolver false si las palabras tienen diferentes longitudes', () => {
+
+  it('devuelve falso para palabras que no son anagramas', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.sonAnagramas('casa', 'silla')).toBeFalse();
-    expect(app.sonAnagramas('hola', 'adiós')).toBeFalse();
+    expect(app.RetoAnagrama('hola', 'olor')).toBeFalse();
+    expect(app.RetoAnagrama('foo', 'bar')).toBeFalse();
   });
-  it('debería devolver true para palabras vacías', () => {
+  it('palabras de diferentes longitud devuelve falso', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.sonAnagramas('', '')).toBeTrue();
+    expect(app.RetoAnagrama('casa', 'silla')).toBeFalse();
+    expect(app.RetoAnagrama('hola', 'adiós')).toBeFalse();
+  });
+  it('palabras vacias devuelve falso', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.RetoAnagrama('', '')).toBeFalse();
   });
 
 

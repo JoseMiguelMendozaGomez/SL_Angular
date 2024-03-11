@@ -27,26 +27,61 @@ export class AppComponent {
     }
 
     // Funcion reto #2 
-     sonAnagramas(palabra1: string, palabra2: string): boolean {
-      // Si las palabras tienen diferente longitud, no pueden ser anagramas
+     RetoAnagrama(palabra1: string, palabra2: string): boolean {
+      palabra1 = palabra1.replace(/\s/g, "");
+      palabra2 = palabra2.replace(/\s/g, "");
+
       if (palabra1.length !== palabra2.length) {
           return false;
       }
-  
-      // Convertimos las palabras a arrays de caracteres y las ordenamos
-      const chars1 = palabra1.split('').sort();
-      const chars2 = palabra2.split('').sort();
-  
-      // Comparamos los arrays de caracteres
-      for (let i = 0; i < chars1.length; i++) {
-          if (chars1[i] !== chars2[i]) {
-              // Si encontramos al menos una letra diferente, no son anagramas
+      if (palabra1 === palabra2) {
+        return false;
+      }
+      let var1 = palabra1.split('').sort();
+      let var2= palabra2.split('').sort();
+      for (let i = 0; i < var1.length; i++) {
+          if (var1[i] !== var2[i]) {
               return false;
           }
       }
-  
-      // Si no encontramos ninguna diferencia, son anagramas
       return true;
+
+      }
+       // Funcion Reto #3 Fibonacci 
+      
+       esPar(numero: number): boolean {
+        return numero % 2 === 0;
+       }
+
+       esFibonacci(numero: number): boolean {
+        if (numero === 0 || numero === 1) return true;
+        let a = 0, b = 1;
+        while (b < numero) {
+          let temp = a;
+          a = b;
+          b = temp + b;
+        }
+        return b === numero;
+      }
+
+      esPrimo(numero: number): boolean {
+        if (numero <= 1) return false;
+        for (let i = 2; i * i <= numero; i++) {
+          if (numero % i === 0) return false;
+        }
+        return true;
+      }
+      
+      main(numero: number) {
+        let mensaje = `${numero} es`;
+        if (this.esPrimo(numero)){mensaje += " primo,"} else {mensaje += " no es primo"} ;
+        if (this.esFibonacci(numero)){mensaje += " fibonacci"} else {mensaje += " no es fibonacci"};
+        if (this.esPar(numero)){mensaje += " y es par"} else {mensaje += " y es impar"};
+        return mensaje;
+      }
+
+
+
   }
 
 
@@ -56,7 +91,7 @@ export class AppComponent {
 
 
 
-  }
+  
 
 
 

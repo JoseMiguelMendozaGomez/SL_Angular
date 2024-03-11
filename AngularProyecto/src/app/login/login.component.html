@@ -1,22 +1,21 @@
 <div class="main-container">
     <div id="grid-container">
         <div class="up-container">
-            <barra_lateral
-                [welcomeText]="'Te damos la bienvenida al portal Personal Banking'" 
-                [registerText]="'¿Aún no tienes una cuenta?'" 
-                [registerLinkText]="'Registrate ahora'"
-                [mensajeSidebar1]="'¿Eres nuevo en el banco?'"
-                [mensajeSidebar2]="'Crea tu clave'"
-            ></barra_lateral>
+            
+            <barra_lateral [welcomeText]= "'Te damos la bienvenida al portal Personal Banking'"
+                [registerText]="'¿Aún no tienes una cuenta?'" [registerLinkText]="'Registrate ahora'"
+                [mensajeSidebar1]="'¿Eres nuevo en el banco?'" [mensajeSidebar2]="'Crea tu clave'"></barra_lateral>
         </div>
         <div id="box3">
             <div id="box3_1">
                 <h1 class="log_tit" id="sesiontit"><span class="inicio" id="iniciotit">Inicio de </span>Sesión</h1>
-                <input type="email" class="correo" id="correo" placeholder="Ingresa tu correo electronico">
-                <input type="password" class="clave" id="clave" placeholder="Ingresa tu clave de internet">
-                <h5 class="problemas">Tienes problema con tu cuenta?<span class="contra" id="recuperar"> Recuperar
-                        contraseña</span></h5>
-                <button class="btn_inicio" id="btniniciar">Iniciar Sesión</button>
+                <form action="">
+                    <input type="email" class="correo" id="correo" placeholder="Ingresa tu correo electronico">
+                    <input type="password" class="clave" id="clave" placeholder="Ingresa tu clave de internet">
+                    <h5 class="problemas">Tienes problema con tu cuenta?<span class="contra" id="recuperar"> Recuperar
+                            contraseña</span></h5>
+                    <button class="btn_inicio" id="btniniciar">Iniciar Sesión</button>
+                </form>
             </div>
         </div>
     </div>

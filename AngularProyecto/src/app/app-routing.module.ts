@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
 import { RegistroComponent } from './registro/registro.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 
 const routes: Routes = [
@@ -11,10 +12,9 @@ const routes: Routes = [
    { path: '',
     component: BarraLateralComponent},
     { path: 'registro',
-    component: RegistroComponent}
-
-    
-     
+    component: RegistroComponent},
+    { path: 'formulario',
+    component: FormularioComponent}
 ];
 
 @NgModule({
